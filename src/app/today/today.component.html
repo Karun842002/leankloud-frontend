@@ -1,0 +1,9 @@
+<div>
+    <span><h2>All Tasks</h2></span>
+    <span><button onclick="location.href = 'https://leankloud-frontend.herokuapp.com/all';" id="myButton" class="float-left submit-button" >All Tasks</button></span>
+</div>
+<ul class="heroes" style="list-style-type:none;">
+  <li *ngFor="let hero of todos">
+    <span class="badge">{{hero.id}}</span> {{hero.task}}
+  </li>
+</ul>

@@ -30,4 +30,32 @@ export class DataService {
     });
     return axiosResponse.data;
   }
+  public async today<T>(): Promise<T>{
+    var axiosResponse = await this.axiosClient.request<T>({
+      method: 'get',
+      url: 'https://leankloud-19049.herokuapp.com/todos/due?due_date=2021-05-16',
+    });
+    return axiosResponse.data;
+  }
+  public async manage<T>(): Promise<T>{
+    var axiosResponse = await this.axiosClient.request<T>({
+      method: 'get',
+      url: 'https://leankloud-19049.herokuapp.com/todos/',
+    });
+    return axiosResponse.data;
+  }
+  public async overdue<T>(): Promise<T>{
+    var axiosResponse = await this.axiosClient.request<T>({
+      method: 'get',
+      url: 'https://leankloud-19049.herokuapp.com/todos/overdue',
+    });
+    return axiosResponse.data;
+  }
+  public async finished<T>(): Promise<T>{
+    var axiosResponse = await this.axiosClient.request<T>({
+      method: 'get',
+      url: 'https://leankloud-19049.herokuapp.com/todos/finished',
+    });
+    return axiosResponse.data;
+  }
 }
