@@ -1,0 +1,6 @@
+<h2>My Tasks</h2>
+<ul class="heroes" style="list-style-type:none;">
+  <li *ngFor="let hero of todos">
+    <span class="badge">{{hero.id}}</span> {{hero.task}}
+  </li>
+</ul>
