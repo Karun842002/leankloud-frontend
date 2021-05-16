@@ -26,7 +26,7 @@ export class DataService {
   public async get<T>(): Promise<T>{
     var axiosResponse = await this.axiosClient.request<T>({
       method: 'get',
-      url: 'http://127.0.0.1:5000/todos/',
+      url: 'https://leankloud-19049.herokuapp.com/todos/',
     });
     return axiosResponse.data;
   }
