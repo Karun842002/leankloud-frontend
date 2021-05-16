@@ -1,6 +1,7 @@
+<button routerLink="../all" routerLinkActive="active">Back</button>
 <h2>Overdue Tasks</h2>
 <ul class="heroes" style="list-style-type:none;">
   <li *ngFor="let hero of todos">
-    <span class="badge">{{hero.id}}</span> {{hero.task}}
+    {{hero.id}} {{hero.task}} {{hero.dueby}} {{hero.status}}
   </li>
 </ul>

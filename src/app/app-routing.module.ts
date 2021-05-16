@@ -7,11 +7,11 @@ import { OverdueComponent } from './overdue/overdue.component';
 import { TodayComponent } from './today/today.component';
 
 const routes: Routes = [
-  {path: '', component: TodayComponent},
-  {path: 'all', component: ListComponent },
-  {path: 'manage', component: ManageComponent},
-  {path: 'overdue', component: OverdueComponent},
-  {path: 'finished', component: FinishedComponent}
+  {path: '',  component: TodayComponent , pathMatch: 'full'},
+  {path: 'all',  component: ListComponent},
+  {path: 'finished',  component: FinishedComponent},
+  {path: 'manage',  component: ManageComponent},
+  {path: 'overdue',  component: OverdueComponent}
 ];
 
 @NgModule({
