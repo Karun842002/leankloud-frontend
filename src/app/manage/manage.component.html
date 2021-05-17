@@ -3,10 +3,10 @@
 <ul class="heroes" style="list-style-type:none;">
   <li *ngFor="let hero of todos">
     <div>
-      <span>{{hero.id}} {{hero.task}} {{hero.dueby}} {{hero.status}} </span>
-      <span><button>Edit</button></span>
-      <span><button>Delete</button></span>
+      <span [id]="hero.id">{{hero.id}}</span><span> {{hero.task}} {{hero.dueby}} {{hero.status}} </span>
+      <span><button (click)=showUpdatePrompt($event) [id]="hero.id">Edit</button></span>
+      <span><button (click)="dlt($event)" [id]="hero.id">Delete</button></span>
     </div>
   </li>
 </ul>
-<button>Add Task</button>
+<button (click)=showNewPrompt($event)>Add Task</button>
