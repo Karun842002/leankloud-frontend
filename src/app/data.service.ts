@@ -18,7 +18,7 @@ interface task{
 export class DataService {
   private axiosClient: AxiosInstance;
   private errorHandler: ErrorHandler;
-  SERVER_URL = "https://leankloud-19049.herokuapp.com";
+  SERVER_URL = "http://localhost:5000";
   constructor(errorHandler: ErrorHandler) {
     this.errorHandler = errorHandler;
     this.axiosClient = axios.create({
@@ -89,6 +89,10 @@ export class DataService {
         task: todo["task"],
         dueby: todo["dueby"],
         status : todo["status"]
+      },
+      headers:{
+        accept:"application/json",
+        "Content-Type" : "application/json"
       }
     });
     console.log(axiosResponse.data);

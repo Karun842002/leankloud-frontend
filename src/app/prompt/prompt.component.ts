@@ -53,14 +53,14 @@ export class PromptComponent extends SimpleModalComponent<PromptModel, string> i
   constructor(private dataService: DataService) {
     super();
   }
-  apply(event:any) {
+  async apply(event:any) {
     const todo : ttodo ={
       task:this.task,
       dueby:this.due,
       status:this.status
     }
     if (event.currentTarget.id==0) this.dataService.post(todo);
-    else this.dataService.update(event.currentTarget.id, todo);
+    else await this.dataService.update(event.currentTarget.id, todo);
     location.reload();
     this.close();
   }
