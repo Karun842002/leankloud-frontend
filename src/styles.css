@@ -1,7 +1,9 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  }
+html,body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(24, 24, 32);
+}
 
 .modal{
     background-color:rgba(0,0,0,.4);

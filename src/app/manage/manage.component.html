@@ -4,8 +4,8 @@
   <li *ngFor="let hero of todos">
     <div>
       <span [id]="hero.id">{{hero.id}}</span><span> {{hero.task}} {{hero.dueby}} {{hero.status}} </span>
-      <span><button (click)=showUpdatePrompt($event) [id]="hero.id">Edit</button></span>
-      <span><button (click)="dlt($event)" [id]="hero.id">Delete</button></span>
+      <span><button (click)=showUpdatePrompt($event) [id]="hero.id"><i class="fa fa-pencil" aria-hidden="true"></i></button></span>
+      <span><button (click)="dlt($event)" [id]="hero.id"><i class="fa fa-trash-o" aria-hidden="true"></i></button></span>
     </div>
   </li>
 </ul>
