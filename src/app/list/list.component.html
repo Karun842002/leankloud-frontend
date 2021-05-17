@@ -1,13 +1,36 @@
-<button routerLink=".." routerLinkActive="active">Back</button>
-<h2>All Tasks</h2>
-<ul class="heroes" style="list-style-type:none;">
-  <li *ngFor="let hero of todos">
-    {{hero.id}} {{hero.task}} {{hero.dueby}} {{hero.status}}
-  </li>
-</ul>
-<div>
-  <span><button routerLink="../finished" routerLinkActive="active"> Finished</button></span>
-  <span><button routerLink="../manage" routerLinkActive="active"> Manage</button></span>
-  <span><button routerLink="../overdue" routerLinkActive="active"> Overdue</button></span>
-</div>
+
+<html>
+  <div class="body">
+    <div class="list-container">
+      <div class="heading-container">
+        <span><button routerLink=".." routerLinkActive="active" class="back"><i class="fa fa-chevron-left" aria-hidden="true"></i></button></span>
+        <span class="heading">All Tasks</span>
+      </div>
+      <div class="containe
+      
+      
+      r">
+        <ul class="responsive-table">
+          <li class="table-header">
+            <div class="col col-1">ID</div>
+            <div class="col col-2">Task</div>
+            <div class="col col-3">Due Date</div>
+            <div class="col col-4">Status</div>
+          </li>
+          <li *ngFor="let hero of todos" class="table-row">
+            <div class="col col-1" data-label="Job Id">{{hero.id}}</div>
+            <div class="col col-2" data-label="Customer Name">{{hero.task}}</div>
+            <div class="col col-3" data-label="Amount">{{hero.dueby}}</div>
+            <div class="col col-4" data-label="Payment Status">{{hero.status}}</div>
+          </li>
+        </ul>
+      </div>
+      <div class="footer">
+        <span><button routerLink="../finished" routerLinkActive="active" class="footer-button"> Finished</button></span>
+        <span><button routerLink="../manage" routerLinkActive="active" class="footer-button"> Manage</button></span>
+        <span><button routerLink="../overdue" routerLinkActive="active" class="footer-button"> Overdue</button></span>
+      </div>
+    </div>
+  </div>
+</html>
 
