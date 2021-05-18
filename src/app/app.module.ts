@@ -11,6 +11,8 @@ import { TodayComponent } from './today/today.component';
 import { ManageComponent } from './manage/manage.component';
 import { PromptComponent } from './prompt/prompt.component';
 import { SimpleModalModule } from 'ngx-simple-modal';
+import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SimpleModalModule } from 'ngx-simple-modal';
     FinishedComponent,
     TodayComponent,
     ManageComponent,
-    PromptComponent
+    PromptComponent,
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

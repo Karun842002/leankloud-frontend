@@ -17,10 +17,12 @@ interface task{
 export class ListComponent implements OnInit {
 
   public todos : task[];
+  access : Boolean;
   public apiClient:DataService;
   constructor(private dataService: DataService) {
     this.apiClient = dataService;
     this.todos = [];
+    this.access = (localStorage.getItem('access')=='w');
    }
 
   async ngOnInit() {

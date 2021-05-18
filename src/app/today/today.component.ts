@@ -25,6 +25,8 @@ export class TodayComponent implements OnInit {
   async ngOnInit() {
     this.todos = await this.apiClient.today<task[]>();
     console.log(this.todos)
+    console.log(localStorage.getItem('access'));
+    console.log(localStorage.getItem('username'));
   }
 
 }

@@ -10,6 +10,17 @@ interface task{
   status : string;
 }
 
+interface creds{
+  username : string;
+  password : string;
+  access : string;
+}
+
+interface response{
+  cred:creds;
+  status:number;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -110,5 +121,19 @@ export class DataService {
       }
     });
     console.log(axiosResponse.data);
+  }
+  public async login<response>(username:string, password:string){
+    var Url = this.SERVER_URL+'/todos/login';
+    console.log(Url);
+    var axiosResponse = await this.axiosClient.request<creds>({
+      method: 'post',
+      url: Url,
+      data:{
+        username: username,
+        password: password
+      }
+    });
+    var cred : creds = axiosResponse.data;
+    return { cred: cred, status:axiosResponse.status };
   }
 }

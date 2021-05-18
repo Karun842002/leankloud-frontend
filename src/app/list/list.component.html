@@ -1,9 +1,9 @@
-
 <html>
+  <app-navbar></app-navbar>
   <body>
     <div class="list-container">
       <div class="heading-container">
-        <span><button routerLink=".." routerLinkActive="active" class="back"><i class="fa fa-chevron-left" aria-hidden="true"></i></button></span>
+        <span><button routerLink="../today" routerLinkActive="active" class="back"><i class="fa fa-chevron-left" aria-hidden="true"></i></button></span>
         <span class="heading">All Tasks</span>
       </div>
       <div class="container">
@@ -24,7 +24,7 @@
       </div>
       <div class="footer">
         <span><button routerLink="../finished" routerLinkActive="active" class="footer-button"> Finished</button></span>
-        <span><button routerLink="../manage" routerLinkActive="active" class="footer-button"> Manage</button></span>
+        <span><button *ngIf="access" routerLink="../manage" routerLinkActive="active" class="footer-button"> Manage</button></span>
         <span><button routerLink="../overdue" routerLinkActive="active" class="footer-button"> Overdue</button></span>
       </div>
     </div>

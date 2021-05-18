@@ -1,18 +1,19 @@
 <html>
+  <app-navbar></app-navbar>
   <div class="body">
     <div class="main-container">
       <div class="main-header">
         <span class="header">Today's Tasks</span>
         <span>
-          <button routerLink="all" routerLinkActive="active" class="all-tasks">
+          <button routerLink="../all" routerLinkActive="active" class="all-tasks">
             All Tasks
           </button>
         </span>
       </div>
       <ul class="heroes" style="list-style-type: none">
-        <div class="task-container">
-          <li *ngFor="let hero of todos">
-            {{ hero.task }}
+        <div>
+          <li *ngFor="let hero of todos" class="task-container">
+            <span>{{ hero.task }}</span>
           </li>
         </div>
       </ul>

@@ -19,9 +19,11 @@ export class ManageComponent implements OnInit {
 
   public todos : task[];
   public apiClient:DataService;
+  access : Boolean;
   constructor(private dataService: DataService,private SimpleModalService: SimpleModalService) {
     this.apiClient = dataService;
     this.todos = [];
+    this.access = (localStorage.getItem('access')=='w');
    }
 
   async ngOnInit() {
@@ -50,7 +52,7 @@ export class ManageComponent implements OnInit {
     var t = await this.dataService.getbyid<task>(event.currentTarget.id);
     console.log(t);
     this.SimpleModalService.addModal(PromptComponent, {
-      title: 'Add Task',
+      title: 'Manage Task',
       id: t["id"],
       task:t["task"],
       due:t["dueby"],
