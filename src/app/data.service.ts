@@ -29,7 +29,7 @@ interface response{
 export class DataService {
   private axiosClient: AxiosInstance;
   private errorHandler: ErrorHandler;
-  SERVER_URL = "http://localhost:5000";
+  SERVER_URL = "https://leankloud-19049.herokuapp.com";
   constructor(errorHandler: ErrorHandler) {
     this.errorHandler = errorHandler;
     this.axiosClient = axios.create({
